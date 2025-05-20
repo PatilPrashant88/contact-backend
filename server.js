@@ -53,7 +53,7 @@ app.post("/send", async (req, res) => {
 
     // 2. Fill Google Sheet
     try {
-      const sheetResponse = await fetch(googleSheetURL, {
+      const sheetResponse = await fetch("https://contact-backend-dem5.onrender.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
