@@ -74,7 +74,7 @@ app.post("/send", async (req, res) => {
     console.log("✅ Confirmation email sent to user.");
 
     // Final response
-    res.status(200).json({ message: "Emails sent and data saved successfully!" });
+    res.status(200).json({ message: "Message sent successfully!" });
   } catch (error) {
     console.error("❌ Main Error:", error);
     res.status(500).json({ message: "Failed to complete the process." });
