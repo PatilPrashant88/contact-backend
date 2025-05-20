@@ -80,30 +80,6 @@ app.post("/send", async (req, res) => {
     res.status(500).json({ message: "Failed to complete the process." });
   }
 });
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  fetch("https://contact-backend-dem5.onrender.com", {  // ✅ Replace with your Render backend URL
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ name, email, message }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      alert("Thank you for contacting me. I’ll reply soon!");
-      document.getElementById("contact-form").reset();
-    })
-    .catch((error) => {
-      alert("Something went wrong. Please try again later.");
-      console.error("Error:", error);
-    });
-});
 
 
 // Start server
